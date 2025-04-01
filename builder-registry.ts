@@ -1,13 +1,19 @@
 "use client";
 import { builder, Builder } from "@builder.io/react";
-import { Avatar, AvatarBlock } from "./components/ui/primitives/Avatar/Avatar";
-import { Button, ButtonGroup } from "./components/ui/primitives/Button/Button";
+import { Avatar } from "./components/ui/primitives/Avatar/Avatar";
+import { Footer } from "./components/ui/compositions/Footers/Footers";
 import {
   Header,
   HeaderAuth,
 } from "./components/ui/compositions/Headers/Headers";
+import { InputField } from "./components/ui/primitives/Input/Input";
+import { TextareaField } from "./components/ui/primitives/Textarea/Textarea";
 
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY!);
+
+Builder.registerComponent(Avatar, {
+  name: "Avatar",
+});
 
 Builder.registerComponent(Header, {
   name: "Header",
@@ -17,18 +23,14 @@ Builder.registerComponent(HeaderAuth, {
   name: "HeaderAuth",
 });
 
-Builder.registerComponent(Avatar, {
-  name: "Avatar",
+Builder.registerComponent(InputField, {
+  name: "InputField",
 });
 
-Builder.registerComponent(Button, {
-  name: "Button",
+Builder.registerComponent(TextareaField, {
+  name: "TextareaField",
 });
 
-Builder.registerComponent(ButtonGroup, {
-  name: "ButtonGroup",
-});
-
-Builder.registerComponent(AvatarBlock, {
-  name: "AvatarBlock",
+Builder.registerComponent(Footer, {
+  name: "Footer",
 });
