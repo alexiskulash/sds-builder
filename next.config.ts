@@ -5,9 +5,11 @@ const nextConfig: NextConfig = BuilderDevTools()(
   BuilderDevTools()(
     BuilderDevTools()(
       BuilderDevTools()(
-        BuilderDevTools()({
-          /* config options here */
-        }),
+        BuilderDevTools()(
+          BuilderDevTools()({
+            /* config options here */
+          }),
+        ),
       ),
     ),
   ),
