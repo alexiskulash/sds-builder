@@ -59,7 +59,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Image Section */}
+      {/* Banner Image */}
       <Image
         src="/banner.jpg"
         alt="Banner"
@@ -78,131 +78,34 @@ export default function Home() {
         </div>
 
         <div className="flex mt-12 w-full items-start gap-12 flex-wrap max-md:mt-10">
-          {/* Testimonial Card 1 */}
-          <div className="rounded-lg bg-white border border-[#d9d9d9] min-w-[300px] p-6 flex-1 flex-shrink max-md:p-5">
-            <div className="flex-1 flex-shrink w-full text-2xl text-[#1e1e1e] font-semibold tracking-[-0.48px] leading-tight">
-              "Quote"
-            </div>
-            <div className="flex mt-6 w-[139px] max-w-full items-start gap-3 text-base leading-normal">
-              <Image
-                src="/avatar1.jpg"
-                alt="Avatar"
-                width={40}
-                height={40}
-                className="object-contain w-10 h-10 rounded-full flex-shrink-0"
-              />
-              <div className="flex-1 flex-shrink">
-                <div className="text-[#757575] font-semibold">Title</div>
-                <div className="text-[#b3b3b3] font-normal">Description</div>
+          {[...Array(6)].map((_, index) => (
+            <div
+              key={index}
+              className="rounded-lg bg-white border border-[#d9d9d9] min-w-[300px] p-6 flex-1 flex-shrink max-md:p-5"
+            >
+              <div className="flex-1 flex-shrink w-full text-2xl text-[#1e1e1e] font-semibold tracking-[-0.48px] leading-tight">
+                "Quote"
+              </div>
+              <div className="flex mt-6 w-[139px] max-w-full items-start gap-3 text-base leading-normal">
+                <Image
+                  src={`/avatar${(index % 3) + 1}.jpg`}
+                  alt="Avatar"
+                  width={40}
+                  height={40}
+                  className="object-contain w-10 h-10 rounded-full flex-shrink-0"
+                />
+                <div className="flex-1 flex-shrink">
+                  <div className="text-[#757575] font-semibold">Title</div>
+                  <div className="text-[#b3b3b3] font-normal">Description</div>
+                </div>
               </div>
             </div>
-          </div>
-
-          {/* Testimonial Card 2 */}
-          <div className="rounded-lg bg-white border border-[#d9d9d9] min-w-[300px] p-6 flex-1 flex-shrink max-md:p-5">
-            <div className="flex-1 flex-shrink w-full text-2xl text-[#1e1e1e] font-semibold tracking-[-0.48px] leading-tight">
-              "Quote"
-            </div>
-            <div className="flex mt-6 w-[139px] max-w-full items-start gap-3 text-base leading-normal">
-              <Image
-                src="/avatar2.jpg"
-                alt="Avatar"
-                width={40}
-                height={40}
-                className="object-contain w-10 h-10 rounded-full flex-shrink-0"
-              />
-              <div className="flex-1 flex-shrink">
-                <div className="text-[#757575] font-semibold">Title</div>
-                <div className="text-[#b3b3b3] font-normal">Description</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Testimonial Card 3 */}
-          <div className="rounded-lg bg-white border border-[#d9d9d9] min-w-[300px] p-6 flex-1 flex-shrink max-md:p-5">
-            <div className="flex-1 flex-shrink w-full text-2xl text-[#1e1e1e] font-semibold tracking-[-0.48px] leading-tight">
-              "Quote"
-            </div>
-            <div className="flex mt-6 w-[139px] max-w-full items-start gap-3 text-base leading-normal">
-              <Image
-                src="/avatar3.jpg"
-                alt="Avatar"
-                width={40}
-                height={40}
-                className="object-contain w-10 h-10 rounded-full flex-shrink-0"
-              />
-              <div className="flex-1 flex-shrink">
-                <div className="text-[#757575] font-semibold">Title</div>
-                <div className="text-[#b3b3b3] font-normal">Description</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Testimonial Card 4 */}
-          <div className="rounded-lg bg-white border border-[#d9d9d9] min-w-[300px] p-6 flex-1 flex-shrink max-md:p-5">
-            <div className="flex-1 flex-shrink w-full text-2xl text-[#1e1e1e] font-semibold tracking-[-0.48px] leading-tight">
-              "Quote"
-            </div>
-            <div className="flex mt-6 w-[139px] max-w-full items-start gap-3 text-base leading-normal">
-              <Image
-                src="/avatar1.jpg"
-                alt="Avatar"
-                width={40}
-                height={40}
-                className="object-contain w-10 h-10 rounded-full flex-shrink-0"
-              />
-              <div className="flex-1 flex-shrink">
-                <div className="text-[#757575] font-semibold">Title</div>
-                <div className="text-[#b3b3b3] font-normal">Description</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Testimonial Card 5 */}
-          <div className="rounded-lg bg-white border border-[#d9d9d9] min-w-[300px] p-6 flex-1 flex-shrink max-md:p-5">
-            <div className="flex-1 flex-shrink w-full text-2xl text-[#1e1e1e] font-semibold tracking-[-0.48px] leading-tight">
-              "Quote"
-            </div>
-            <div className="flex mt-6 w-[139px] max-w-full items-start gap-3 text-base leading-normal">
-              <Image
-                src="/avatar2.jpg"
-                alt="Avatar"
-                width={40}
-                height={40}
-                className="object-contain w-10 h-10 rounded-full flex-shrink-0"
-              />
-              <div className="flex-1 flex-shrink">
-                <div className="text-[#757575] font-semibold">Title</div>
-                <div className="text-[#b3b3b3] font-normal">Description</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Testimonial Card 6 */}
-          <div className="rounded-lg bg-white border border-[#d9d9d9] min-w-[300px] p-6 flex-1 flex-shrink max-md:p-5">
-            <div className="flex-1 flex-shrink w-full text-2xl text-[#1e1e1e] font-semibold tracking-[-0.48px] leading-tight">
-              "Quote"
-            </div>
-            <div className="flex mt-6 w-[139px] max-w-full items-start gap-3 text-base leading-normal">
-              <Image
-                src="/avatar3.jpg"
-                alt="Avatar"
-                width={40}
-                height={40}
-                className="object-contain w-10 h-10 rounded-full flex-shrink-0"
-              />
-              <div className="flex-1 flex-shrink">
-                <div className="text-[#757575] font-semibold">Title</div>
-                <div className="text-[#b3b3b3] font-normal">Description</div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
       {/* Footer */}
       <footer className="bg-white border-t border-[#d9d9d9] flex w-full px-8 py-8 pb-40 items-start gap-4 overflow-hidden flex-wrap max-md:px-5 max-md:pb-24">
-        {/* Logo and Social Icons */}
         <div className="flex min-w-60 flex-col items-start w-[262px]">
           <div className="flex w-[23px] items-center justify-center">
             <Image
@@ -245,67 +148,59 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Use Cases Column */}
-        <div className="flex min-w-60 flex-col items-start font-sans text-base text-[#1e1e1e] font-normal leading-normal w-[262px]">
-          <div className="w-full pb-4 font-semibold">
-            <div className="w-full">Use cases</div>
+        {/* Footer Navigation */}
+        {[
+          {
+            title: "Use cases",
+            items: [
+              "UI design",
+              "UX design",
+              "Wireframing",
+              "Diagramming",
+              "Brainstorming",
+              "Online whiteboard",
+              "Team collaboration",
+            ],
+          },
+          {
+            title: "Explore",
+            items: [
+              "Design",
+              "Prototyping",
+              "Development features",
+              "Design systems",
+              "Collaboration features",
+              "Design process",
+              "FigJam",
+            ],
+          },
+          {
+            title: "Resources",
+            items: [
+              "Blog",
+              "Best practices",
+              "Colors",
+              "Color wheel",
+              "Support",
+              "Developers",
+              "Resource library",
+            ],
+          },
+        ].map((column, index) => (
+          <div
+            key={index}
+            className="flex min-w-60 flex-col items-start font-sans text-base text-[#1e1e1e] font-normal leading-normal w-[262px]"
+          >
+            <div className="w-full pb-4 font-semibold">
+              <div className="w-full">{column.title}</div>
+            </div>
+            {column.items.map((item, itemIndex) => (
+              <div key={itemIndex} className="mt-3 w-[89px]">
+                {item}
+              </div>
+            ))}
           </div>
-          <div className="mt-3 w-[89px]">UI design</div>
-          <div className="mt-3 w-[89px]">UX design</div>
-          <div className="mt-3 w-[89px] whitespace-nowrap max-md:whitespace-normal">
-            Wireframing
-          </div>
-          <div className="mt-3 w-[89px] whitespace-nowrap max-md:whitespace-normal">
-            Diagramming
-          </div>
-          <div className="mt-3 w-[89px] whitespace-nowrap max-md:whitespace-normal">
-            Brainstorming
-          </div>
-          <div className="mt-3 w-[89px]">Online whiteboard</div>
-          <div className="mt-3 w-[89px]">Team collaboration</div>
-        </div>
-
-        {/* Explore Column */}
-        <div className="flex min-w-60 flex-col items-start font-sans text-base text-[#1e1e1e] font-normal leading-normal w-[262px]">
-          <div className="w-full pb-4 font-semibold whitespace-nowrap max-md:whitespace-normal">
-            <div className="w-full max-md:whitespace-normal">Explore</div>
-          </div>
-          <div className="mt-3 w-[89px] whitespace-nowrap max-md:whitespace-normal">
-            Design
-          </div>
-          <div className="mt-3 w-[89px] whitespace-nowrap max-md:whitespace-normal">
-            Prototyping
-          </div>
-          <div className="mt-3 w-[89px]">Development features</div>
-          <div className="mt-3 w-[89px]">Design systems</div>
-          <div className="mt-3 w-[89px]">Collaboration features</div>
-          <div className="mt-3 w-[89px]">Design process</div>
-          <div className="mt-3 w-[89px] whitespace-nowrap max-md:whitespace-normal">
-            FigJam
-          </div>
-        </div>
-
-        {/* Resources Column */}
-        <div className="flex min-w-60 flex-col items-start font-sans text-base text-[#1e1e1e] font-normal leading-normal w-[262px]">
-          <div className="w-full pb-4 font-semibold whitespace-nowrap max-md:whitespace-normal">
-            <div className="w-full max-md:whitespace-normal">Resources</div>
-          </div>
-          <div className="mt-3 w-[89px] whitespace-nowrap max-md:whitespace-normal">
-            Blog
-          </div>
-          <div className="mt-3 w-[89px]">Best practices</div>
-          <div className="mt-3 w-[89px] whitespace-nowrap max-md:whitespace-normal">
-            Colors
-          </div>
-          <div className="mt-3 w-[89px]">Color wheel</div>
-          <div className="mt-3 w-[89px] whitespace-nowrap max-md:whitespace-normal">
-            Support
-          </div>
-          <div className="mt-3 w-[89px] whitespace-nowrap max-md:whitespace-normal">
-            Developers
-          </div>
-          <div className="mt-3 w-[89px]">Resource library</div>
-        </div>
+        ))}
       </footer>
     </div>
   );
